@@ -74,12 +74,12 @@ Edge'den gelen yüksek frekanslı ham veriler doğrudan LLM'e verilmez. Önce ma
 #### 🎯 Ağ Gecikmesinde Gerçek Frekans (Lomb-Scargle)
 Endüstriyel ağlardaki Jitter (veri gecikmesi) standart FFT analizlerini bozar. **Lomb-Scargle** algoritması ile bu düzensiz zaman damgaları filtrelenerek makinenin gerçek titreşim frekansı kusursuz saptanır.
 
-![Lomb-Scargle Analizi](/docs/assets/lomb_scargle_analysis.png)
+![Lomb-Scargle Analizi](docs/assets/lomb_scargle_analysis.png)
 
 #### 🚨 Çok Boyutlu Anomali Tespiti (PCA)
 Sıcaklık, titreşim ve basınç gibi çok boyutlu veriler, kovaryans matrisinin özdeğer ayrışımı (PCA) ile 2 boyutlu Faz Uzayına indirgenir. Sistem, rulman bozulması gibi anomalileri görsel olarak ayırt eder.
 
-![PCA Anomali Tespiti](/docs/assets/pca_anomaly_detection.png)
+![PCA Anomali Tespiti](docs/assets/pca_anomaly_detection.png)
 
 ---
 
