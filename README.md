@@ -48,7 +48,7 @@ Sistemin kalbi olan MER_OS, LangChain gibi dışa bağımlı ve hantal framework
 ### 📂 MER_OS v2 Dizin Yapısı ve Gerçek Kodlar
 Tüm sistem izole ve tek sorumluluk prensibiyle (Single Responsibility) çalışır:
 
-- 📄 **Giriş Noktası:** [`mer_os_core/main.py`](file:///c:/Users/yaucu/Masaüstü/Sistem%20Mühendisliği%20Proof%20of%20Work/github_proof_of_work/mer_os_core/main.py)
+- 📄 **Giriş Noktası:** [`mer_os_core/main.py`]
 - 📂 **`mer_os_core/core/`**: Orkestratör ajan ve LLM istemcisinin bulunduğu merkez. İnsan-Onayı (Human-in-the-Loop) burada yönetilir.
 - 📂 **`mer_os_core/agents/`**: Vektörel hafızayı tarayan *Memory Curator* ve veri ayıklayan *Info Solver* gibi spesifik alt ajanlar.
 - 📂 **`mer_os_core/sandbox/`**: LLM'in güvenle dosya okuyup yazabildiği, Python betiklerini koşturabildiği izole üretim ortamı.
@@ -59,7 +59,7 @@ Tüm sistem izole ve tek sorumluluk prensibiyle (Single Responsibility) çalış
 
 Mühendislik departmanının tasarımlarını (Solidworks BOM) otomatik olarak MER_OS'un hafızasına besleyen sistemdir.
 
-- 📄 **Betik Yolu:** [`edge_node/solid_to_json.py`](file:///c:/Users/yaucu/Masaüstü/Sistem%20Mühendisliği%20Proof%20of%20Work/github_proof_of_work/edge_node/solid_to_json.py)
+- 📄 **Betik Yolu:** [`edge_node/solid_to_json.py`]
 
 Bu betik sayesinde, CAD dosyalarındaki parçalar, adetler ve ağırlıklar JSON'a çevrilip veritabanına atılır. **Böylece makinede bir arıza olduğunda, MER_OS o an HANGİ PROJENİN HANGİ PARÇASININ işlendiğini anında bilebilir.**
 
@@ -74,12 +74,12 @@ Edge'den gelen yüksek frekanslı ham veriler doğrudan LLM'e verilmez. Önce ma
 #### 🎯 Ağ Gecikmesinde Gerçek Frekans (Lomb-Scargle)
 Endüstriyel ağlardaki Jitter (veri gecikmesi) standart FFT analizlerini bozar. **Lomb-Scargle** algoritması ile bu düzensiz zaman damgaları filtrelenerek makinenin gerçek titreşim frekansı kusursuz saptanır.
 
-![Lomb-Scargle Analizi](./docs/assets/lomb_scargle_analysis.png)
+![Lomb-Scargle Analizi](/docs/assets/lomb_scargle_analysis.png)
 
 #### 🚨 Çok Boyutlu Anomali Tespiti (PCA)
 Sıcaklık, titreşim ve basınç gibi çok boyutlu veriler, kovaryans matrisinin özdeğer ayrışımı (PCA) ile 2 boyutlu Faz Uzayına indirgenir. Sistem, rulman bozulması gibi anomalileri görsel olarak ayırt eder.
 
-![PCA Anomali Tespiti](./docs/assets/pca_anomaly_detection.png)
+![PCA Anomali Tespiti](/docs/assets/pca_anomaly_detection.png)
 
 ---
 
